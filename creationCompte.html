@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="ADN">
+    <meta name="description" content="Projet BP: adaptation JS">
+    <link rel="stylesheet" href="style.css"/>
+    
+    <title>creation de client</title>
+</head>
+<body>
+
+    <header>
+<!--logo et nom banque-->
+        <div class="logo">
+            <img src="img/bplogo.png" alt="logo BP"/>
+            <h2>Banque du Peuple</h2>
+        </div>
+<!--end of logo et nom banque-->
+
+<!--nav-->               
+       <nav>
+            <ul>
+                <li><a href="accueilresp.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Ajouter client</a>
+                    <div class="dropdown-content">
+                      <a href="#">Client Particulier</a>
+                      <a href="#">Client Entreprise</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Listes des clients</a>
+                    <div class="dropdown-content">
+                      <a href="#">Liste Clients Particuliers</a>
+                      <a href="#">Liste Clients Entreprises</a>
+                      <a href="#">Lister tous les clients</a>
+                    </div>
+                </li>
+                <li><a href="#">Virement</a></li>
+                <li><a href="#">Assistance</a></li>
+            </ul>
+       </nav>
+<!--end of nav-->  
+
+    </header>
+    
+<!--content of the page--> 
+    <div class="content">
+
+    <h3>Particuliers</h3>
+    <h6>id:: Tidjane THIAM, O98AGTT248-3</h6>
+
+        <form action="" class="myForm" method="" id="ajoutclientP">
+
+            <div class="flexform">
+
+                <div id="form1">
+
+                    <label for="nom">Nom: </label><br>
+                        <input type="text" id="nom" placeholder="Nom du client"/><br>
+                        <span id="name_error"></span><br>
+
+                    <label for="prenom">Prenom: </label><br>
+                        <input type="text" id="prenom" placeholder="Prenom du client"/><br>
+                        <span id="firstname_error"></span><br>
+
+                    <label for="adresse">Adresse: </label><br>
+                        <input type="text" id="adresse" placeholder="Adresse du client"/><br>
+                        <span id="adress_error"></span><br>
+
+                    <label for="telephone">Telephone: </label><br>
+                        <input type="text" id="tel" placeholder="Telephone du client"/><br>
+                        <span id="tel_error"></span><br>
+
+                    <label for="email"></label>Email: </label><br>
+                        <input type="text" id="email" placeholder="email du client"/><br>
+                        <span id="email.error"></span><br>
+    
+                </div>
+    
+                <div id="form2">
+    
+                    <label for="salaire">Salaire actuel: </label><br>
+                        <input type="text" id="salaire" placeholder="salaire du client"/><br>
+                        <span id="salary_error"></span><br>
+                        
+                    <label for="info_employeur">Informations de l'employeur: </label><br>
+                        <textarea id="infos_emp" placeholder="infos employeur"></textarea><br>
+
+                    <label for="identification">identification: </label><br>
+                        <input type="text" id="identity" placeholder="CNI/Passport"/><br>
+                        <span id="id_error"></span><br>
+
+                    <label for="typeCompte">Type de compte: </label><br>
+                        <select name="typecompte" id="type_compte">
+                            <option value="Epargne">Epargne Xeewël</option>
+                            <option value="Courant">Courant</option>
+                            <option value="Bloque">Bloqué</option>
+                        </select><br>
+
+                    <label for="numCompte">Numero de compte: </label><br>
+                        <input type="text" id="num_compte" placeholder="Numero de compte"/>
+                        <span id="account_error"></span><br>
+    
+                </div>
+
+            </div>
+
+            <div class="btns">
+                <input type="submit" id="submit" value="Enregistrer">
+                <input type="reset" id="reset" value="Annuler">
+            </div> 
+            
+            
+        </form>
+
+            
+            
+    </div>
+<!--content of the page--> 
+
+        <script src="scriptbp.js"></script>
+</body>
+</html>
