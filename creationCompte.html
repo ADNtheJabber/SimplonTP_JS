@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="author" content="ADN">
-    <meta name="description" content="Projet BP: adaptation JS">
+    <meta name="author" content="ADN"/>
+    <meta name="description" content="Projet BP: adaptation JS"/>
     <link rel="stylesheet" href="style.css"/>
-    
+
     <title>creation de client</title>
 </head>
 <body>
@@ -23,13 +23,7 @@
        <nav>
             <ul>
                 <li><a href="accueilresp.html">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Ajouter client</a>
-                    <div class="dropdown-content">
-                      <a href="#">Client Particulier</a>
-                      <a href="#">Client Entreprise</a>
-                    </div>
-                </li>
+                <li><a href="#">Ajouter client</a></li>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Listes des clients</a>
                     <div class="dropdown-content">
@@ -43,83 +37,252 @@
             </ul>
        </nav>
 <!--end of nav-->  
-
+        <h4>id:: Tidjane THIAM, O98AGTT248-3</h4>
     </header>
     
 <!--content of the page--> 
     <div class="content">
 
-    <h3>Particuliers</h3>
-    <h6>id:: Tidjane THIAM, O98AGTT248-3</h6>
+        <div class="choices">
 
-        <form action="" class="myForm" method="" id="ajoutclientP">
+            <form action="" class="choixClient" id="formChoixClient">
+                <h5>Choix du type de client</h5>
 
-            <div class="flexform">
+                    <input type="radio" name="typeClient" id="clientExistant"/>
+                    <label for="">Client Existant</label><br>
 
-                <div id="form1">
+                    <input type="radio" name="typeClient" id="clientPhysique"/>
+                    <label for="">Physique</label><br>
 
-                    <label for="nom">Nom: </label><br>
-                        <input type="text" id="nom" placeholder="Nom du client"/><br>
-                        <span id="name_error"></span><br>
+                    <input type="radio" name="typeClient" id="clientEntreprise"/>
+                    <label for="">Entreprise</label>
+            </form>
+          
+            <form action="" class="choixCompte" id="formChoixCompte">
+                <h5>Choix du type de compte</h5>
 
-                    <label for="prenom">Prenom: </label><br>
-                        <input type="text" id="prenom" placeholder="Prenom du client"/><br>
-                        <span id="firstname_error"></span><br>
+                    <input type="radio" name="typeCompte" id="compteEpargne"/>
+                    <label for="">Epargne Simple Xewël</label><br>
 
-                    <label for="adresse">Adresse: </label><br>
-                        <input type="text" id="adresse" placeholder="Adresse du client"/><br>
-                        <span id="adress_error"></span><br>
+                    <input type="radio" name="typeCompte" id="compteCourant"/>
+                    <label for="">Courant</label><br>
 
-                    <label for="telephone">Telephone: </label><br>
-                        <input type="text" id="tel" placeholder="Telephone du client"/><br>
-                        <span id="tel_error"></span><br>
+                    <input type="radio" name="typeCompte" id="compteBloque"/>
+                    <label for="">Bloqué</label>
+            </form>
 
-                    <label for="email"></label>Email: </label><br>
-                        <input type="text" id="email" placeholder="email du client"/><br>
-                        <span id="email.error"></span><br>
+        </div>
+
+        <div class="allForms">
+
+            <div class="formClientPhysique">
+
+                <form action="" class="situationPro" id="formSituationPro">
+                    <h6>Votre situation professionnelle</h6>
+        
+                        <input type="radio" name="sitPro" id="clientSalarie"/>
+                        <label for="">Salarié</label>
+                        <span>      /-*-/    </span>
+                        <input type="radio" name="sitPro" id="clientNonSalarie"/>
+                        <label for="">Non Salarié</label><br>
+                </form>
+
+                <hr class="separate"/>
+                
+                <form action="" class="myFormPhysique" method="" id="clientPhysique">
+        
+                    <div class="flexform">
+        
+                        <div id="form1">
+        
+                            <label for="nom" id="labelNom">Nom: </label><br>
+                                <input type="text" id="nom" placeholder="Nom du client"/><br>
+                                <span id="name_error"></span><br>
+        
+                            <label for="prenom" id="labelPrenom">Prenom: </label><br>
+                                <input type="text" id="prenom" placeholder="Prenom du client"/><br>
+                                <span id="firstname_error"></span><br>
+        
+                            <label for="adresse" id="labelAdresse">Adresse: </label><br>
+                                <input type="text" id="adresse" placeholder="Adresse du client"/><br>
+                                <span id="adress_error"></span><br>
+        
+                            <label for="telephone" id="labelTelephone">Telephone: </label><br>
+                                <input type="text" id="tel" placeholder="Telephone du client"/><br>
+                                <span id="tel_error"></span><br>
+        
+                            <label for="email" id="labelEmail"></label>Email: </label><br>
+                                <input type="text" id="email" placeholder="email du client"/><br>
+                                <span id="email.error"></span><br>
+            
+                        </div>
+            
+                        <div id="form2">
+
+                            <label for="identification" id="labelID">identification: </label><br>
+                                <input type="text" id="identity" placeholder="CNI/Passport"/><br>
+                                <span id="id_error"></span><br>
+
+                            <label for="profession" id="labelProfession">profession: </label><br>
+                                <input type="text" id="profession" placeholder="profession"/><br>
+                                <span id="profession_error"></span><br>
+            
+                            <label for="salaire" id="labelSalaire">Salaire actuel: </label><br>
+                                <input type="text" id="salaire" placeholder="salaire du client"/><br>
+                                <span id="salary_error"></span><br>
+                                
+                            <label for="info_employeur" id="labelEmployeur">Informations de l'employeur: </label><br>
+                                <textarea id="infos_emp" placeholder="infos employeur"></textarea><br>
+                                <span id="infos_emp_error"></span>
+        
+                            
+            
+                        </div>
+        
+                    </div>
+        
+                    <div class="btns">
+                        <input type="submit" id="submit" value="Enregistrer"/>
+                        <input type="reset" id="reset" value="Annuler"/>
+                    </div> 
+                    
+                    
+                </form>
     
-                </div>
+            </div>
     
-                <div id="form2">
+            <div class="formClientEntreprise">
     
-                    <label for="salaire">Salaire actuel: </label><br>
-                        <input type="text" id="salaire" placeholder="salaire du client"/><br>
-                        <span id="salary_error"></span><br>
-                        
-                    <label for="info_employeur">Informations de l'employeur: </label><br>
-                        <textarea id="infos_emp" placeholder="infos employeur"></textarea><br>
+                <form action="" class="myFormEntreprise" method="" id="clientEntreprise">
+        
+                    <div class="flexform">
+        
+                        <div id="form1">
+        
+                            <label for="nom" id="labelNomEntreprise">Nom de l'entreprise: </label><br>
+                                <input type="text" id="nomEntreprise" placeholder="Nom"/><br>
+                                <span id="name_error"></span><br>
+        
+                            <label for="adresse" id="labelAdresseEntreprise">Adresse: </label><br>
+                                <input type="text" id="adresseEntreprise" placeholder="Adresse"/><br>
+                                <span id="adress_error"></span><br>
+        
+                            <label for="telephone" id="labelTelephone">Telephone: </label><br>
+                                <input type="text" id="telEntreprise" placeholder="Telephone"/><br>
+                                <span id="tel_error"></span><br>
+        
+                            <label for="email" id="labelEmail"></label>Email: </label><br>
+                                <input type="text" id="emailEntreprise" placeholder="email"/><br>
+                                <span id="email.error"></span><br>
+            
+                        </div>
+            
+                        <div id="form2">
 
-                    <label for="identification">identification: </label><br>
-                        <input type="text" id="identity" placeholder="CNI/Passport"/><br>
-                        <span id="id_error"></span><br>
-
-                    <label for="typeCompte">Type de compte: </label><br>
-                        <select name="typecompte" id="type_compte">
-                            <option value="Epargne">Epargne Xeewël</option>
-                            <option value="Courant">Courant</option>
-                            <option value="Bloque">Bloqué</option>
-                        </select><br>
-
-                    <label for="numCompte">Numero de compte: </label><br>
-                        <input type="text" id="num_compte" placeholder="Numero de compte"/>
-                        <span id="account_error"></span><br>
+                            <label for="ninea" id="labelNinea">Ninea: </label><br>
+                                <input type="text" id="ninea" placeholder="ninea"/><br>
+                                <span id="ninea_error"></span><br>
+            
+                            <label for="regiscommerce" id="labelRegisCommerce">Registre de commerce: </label><br>
+                                <input type="text" id="regiscommerce" placeholder="registre de commerce"/><br>
+                                <span id="regiscom_error"></span><br>
+                                
+                            <label for="numCompte" id="labelNumCompte">Numero de Compte: </label><br>
+                                <input type="text" id="numCompte" placeholder="Numero de compte"/><br>
+                                <span id="id_error"></span><br>
+            
+                        </div>
+        
+                    </div>
+        
+                    <div class="btns">
+                        <input type="submit" id="submit" value="Enregistrer"/>
+                        <input type="reset" id="reset" value="Annuler"/>
+                    </div> 
+                    
+                    
+                </form>
     
-                </div>
-
             </div>
 
-            <div class="btns">
-                <input type="submit" id="submit" value="Enregistrer">
-                <input type="reset" id="reset" value="Annuler">
-            </div> 
-            
-            
-        </form>
+            <div class="formCompte">
 
-            
+                <form action="" class="myFormCompteBloque" id="compteBloque">
+                        
+                    <fieldset>
+                        <legend>Informations du Compte</legend>
+                         
+                            <label for="fraisOuvCB" id="labelFraisOuvCB">Frais d'Ouverture:</label>
+                            <input type="text" id="fraisOuvCB" placeholder="frais d'ouverture"/><br>
+
+                            <label for="remunAnnuelle" id="labelRemunAnnuelleCB">Montant Remuneration Annuelle:</label>
+                            <input type="text" id="remunAnnuelleCB" placeholder="remuneration annuelle"/><br>
+
+                            <label for="dateDeblocage" id="labelDateDeblocageCB">Date de RéOuverture:</label>
+                            <input type="date" id="dateDeblocage" placeholder="date de reouverture"/><br>
+
+                            <div class="btns">
+                                <input type="submit" id="submit" value="Enregistrer"/>
+                                <input type="reset" id="reset" value="Annuler"/>
+                            </div>
+
+                    </fieldset>
+                        
+                </form>
+
+                <form action="" class="myFormCompteEpargne" id="compteEpargne">
+                        
+                    <fieldset>
+                        <legend>Informations du Compte</legend>
+                         
+                            <label for="fraisOuv" id="labelFraisOuvCE">Frais d'Ouverture:</label>
+                            <input type="text" id="fraisOuvCE" placeholder="frais d'ouverture"/><br>
+
+                            <label for="remunAnnuelle" id="labelRemunAnnuelleCE">Montant Remuneration Annuelle:</label>
+                            <input type="text" id="remunAnnuelleCE" placeholder="remuneration annuelle"/><br>
+
+                            <div class="btns">
+                                <input type="submit" id="submit" value="Enregistrer"/>
+                                <input type="reset" id="reset" value="Annuler"/>
+                            </div>
+                            
+                    </fieldset>
+                        
+                </form>
+
+                <form action="" class="myFormCompteCourant" id="compteCourant">
+                        
+                    <fieldset>
+
+                        <legend>Informations du Compte</legend>
+                         
+                            <label for="agios" id="labelAgiosCC">Agios Trimestrielle:</label>
+                            <input type="text" id="agiosCC" placeholder="agios tous les 03 mois"/><br>
+
+                            <label for="depotInitial" id="labelDepotInitialCC">Montant du dépot initial:</label>
+                            <input type="text" id="depotInitialCC" placeholder="depot initial à la creation"/><br>
+
+                            <div class="btns">
+                                <input type="submit" id="submit" value="Enregistrer"/>
+                                <input type="reset" id="reset" value="Annuler"/>
+                            </div>
+                            
+                    </fieldset>
+                        
+                </form>
+
+                
+            </div>
+        </div>
+
+        
             
     </div>
 <!--content of the page--> 
+
+    <footer>
+
+    </footer>
 
         <script src="scriptbp.js"></script>
 </body>

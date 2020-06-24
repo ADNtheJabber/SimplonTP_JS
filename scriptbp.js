@@ -5,8 +5,6 @@ var annuler = document.getElementById('reset');
 annuler.addEventListener('click', refresh)
 
 
-       
-    
     var nom = document.getElementById("nom");
     var nom_m = document.getElementById('name_error');
 
@@ -39,7 +37,7 @@ annuler.addEventListener('click', refresh)
 
     function check_entrees(e) {
         
-        if (!nom.value || nom.length < 3 || nom[0] === '') {
+        if (!nom.value || nom.length < 3 || nom[0] === '') { 
             e.preventDefault();
                 nom_m.textContent ='renseignez le  nom';
                 nom_m.style.color ='red';            
